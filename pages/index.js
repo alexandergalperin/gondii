@@ -1,6 +1,11 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import Head from 'next/head'
+import Script from 'next/script'
+
 
 export default function MyPage() {
+
+
   const [prompt, setPrompt] = useState("")
   const [answer, setAnswer] = useState("")
   const [isLoading, setIsLoading] = useState(false)
@@ -25,18 +30,27 @@ export default function MyPage() {
   function handleChange(e) {
     setPrompt(e.target.value)
   }
+  
 
   return (
-    <div className="container">
-      <h1>Give Any Instruction</h1>
-      <form className="our-form" onSubmit={handleSubmit}>
-        <input className="prompt-field" type="text" onChange={handleChange} />
-        <button className="prompt-button">Go!</button>
-      </form>
+    <><div>
+      <Head>
+        <title>gondii</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js" />
+      </Head>
 
-      {isLoading && <div className="loading-spinner"></div>}
 
-      <div className="answer-area">{answer}</div>
-    </div>
+
+    </div><div className="container">
+    <script type="text/javascript" src="/sketch.js" />
+        <form className="our-form" onSubmit={handleSubmit}>
+          <input className="prompt-field" type="text" onChange={handleChange} placeholder="was siehst du" />
+          <button className="prompt-button">go</button>
+        </form>
+      <div className="loadCont">
+        {isLoading && <div className="loading-spinner"></div>}
+      </div>
+        <div className="answer-area">{answer}</div>
+      </div></>
   )
 }

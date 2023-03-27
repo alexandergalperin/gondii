@@ -7,35 +7,48 @@ html {
 body {
   font-family: sans-serif;
   line-height: 1.65;
-  color: #333;
+  color: rgb(230, 230, 230);
+  background-color: rgb(31, 31, 31);
 }
 
 .answer-area {
   white-space: pre-wrap;
   margin-top: 1rem;
   font-size: 1.15rem;
+  text-align: center;
+  display: none;
 }
 
 .our-form {
   display: flex;
+  justify-content: center;
   margin-bottom: 1rem;
+  margin-top: 2rem;
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translate(-50%,0);
+  transition-timing-function: ease-in;
+  transition: 0.2s;
 }
 
 .prompt-field {
+  text-align: center;
   flex: 1;
   color: #333;
   padding: 5px;
   font-size: 1rem;
   margin-right: 10px;
+  width: 430px;
 }
 
 .prompt-button {
   padding: 10px;
   font-size: 1rem;
-  color: #fff;
+  color: rgb(39, 39, 39);
   border: none;
   border-radius: 5px;
-  background-color: rgb(46, 98, 255);
+  background-color: rgb(228, 228, 228);
 }
 
 @-webkit-keyframes rotate-forever {
@@ -86,6 +99,12 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.loadCont{
+  display: flex;
+  justify-content: center;
+}
+
 .loading-spinner {
   -webkit-animation-duration: 0.75s;
   -moz-animation-duration: 0.75s;
@@ -118,15 +137,9 @@ body {
   height: auto;
 }
 
-.footer {
-  border-top: 1px dotted rgb(192, 192, 192);
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.footer a {
-  color: #999;
-  margin: 0 10px;
+canvas{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  top: 100px;
 }

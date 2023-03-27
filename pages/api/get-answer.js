@@ -8,8 +8,8 @@ export default async function handler(req, res) {
   if (typeof req.body.prompt === "string") {
     const response = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: req.body.prompt,
-      temperature: 0,
+      prompt: 'Schreibe einen Haiku über einen Parasiten und ' + req.body.prompt + '.',
+      temperature: 0.5,
       max_tokens: 1000
     })
 
