@@ -1,7 +1,27 @@
+@font-face {
+  font-family: 'kaeru kaeru';
+  src: url('../fonts/kaerukaeru-Regular.woff2') format('woff2'),
+      url('../fonts/kaerukaeru-Regular.otf') format('woff'),
+      url('../fonts/kaerukaeru-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 body,
 html {
   padding: 0;
   margin: 0;
+}
+
+h1{
+  color: #fff;
+  position: absolute;
+  left: 50px;
+  font-family: 'kaeru kaeru';
+  font-size: 2rem;
+  opacity: 0.8;
 }
 
 body {
@@ -103,6 +123,12 @@ body {
 .loadCont{
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,50%);
+  z-index: 20;
 }
 
 .loading-spinner {
@@ -120,7 +146,7 @@ body {
   animation-timing-function: linear;
   height: 30px;
   width: 30px;
-  border: 8px solid #777;
+  border: 8px solid #ffffff;
   border-right-color: transparent;
   border-radius: 50%;
   display: inline-block;
@@ -142,4 +168,5 @@ canvas{
   left: 50%;
   transform: translate(-50%,0);
   top: 100px;
+  z-index: 1;
 }

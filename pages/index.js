@@ -40,7 +40,7 @@ export default function MyPage() {
       </Head>
 
 
-
+      <a href="/" title="gondii - reload"><h1>gondii</h1></a>
     </div><div className="container">
     <script type="text/javascript" src="/sketch.js" />
         <form className="our-form" onSubmit={handleSubmit}>
