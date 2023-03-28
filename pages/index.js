@@ -44,13 +44,15 @@ export default function MyPage() {
     </div><div className="container">
     <script type="text/javascript" src="/sketch.js" />
         <form className="our-form" onSubmit={handleSubmit}>
-          <input className="prompt-field" type="text" onChange={handleChange} placeholder="was siehst du" />
+          <input className="prompt-field" type="text" onChange={handleChange}  placeholder="was siehst du"/>
           <button className="prompt-button">go</button>
         </form>
       <div className="loadCont">
         {isLoading && <div className="loading-spinner"></div>}
       </div>
         <div className="answer-area">{answer}</div>
-      </div></>
+      </div>
+      </>
+
   )
 }

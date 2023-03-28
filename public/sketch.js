@@ -347,6 +347,16 @@ function ending() {
     ended = true;
     document.getElementsByClassName('our-form')[0].style.top = '0px'
     textSize(24);
+    document.getElementsByClassName('prompt-button')[0].addEventListener("click", function() {
+        document.getElementsByClassName('prompt-field')[0].readOnly = true;
+        document.getElementsByClassName('prompt-button')[0].disabled = true;
+      });
+    document.getElementsByClassName('prompt-field')[0].addEventListener("keypress", function(event){
+        if (event.key === "Enter") {
+            document.getElementsByClassName('prompt-field')[0].readOnly = true;
+            document.getElementsByClassName('prompt-button')[0].disabled = true;
+        }
+    });
     fill(colPal[1])
     text(ans[0].innerHTML, 15, hFin-100, 400, 400)
 }
