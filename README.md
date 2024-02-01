@@ -19,8 +19,10 @@ Das "gondii" Projekt ist eine künstlerische und abstrakte Simulation, die den L
 ## Demo
 Besuchen Sie die Simulation unter [gondii.vercel.app](https://gondii.vercel.app) (Haiku nicht mehr möglich (OpenAI Lizenz abgelaufen))
 
-Beispiel 1            |  Beispiel 2
-:-------------------------:|:-------------------------:
-![gondii example](/examples/gondii-1.png)| ![gondii example](/examples/gondii-2.png)
+## Beispiele für Simulationsergebnisse
+
+Beispiel 1            |  Beispiel 2 |  Beispiel 3
+:-------------------------:|:-------------------------:|:-------------------------:
+![gondii example](/examples/gondii-1.png)| ![gondii example](/examples/gondii-2.png)| ![gondii example](/examples/gondii-0.png)
 
 
